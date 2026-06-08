@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "nmapx"
+version = "3.0.0"
+description = "Advanced Nmap Python wrapper — async CVE enrichment, session history, diff, Telegram notifications, multiple export formats"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "KIMYA_Lab"}
+]
+requires-python = ">=3.8"
+dependencies = [
+    "httpx>=0.24.0",
+    "python-nmap>=0.7.0",
+    "tqdm>=4.60.0",
+    "openpyxl>=3.0.0",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: System :: Networking :: Monitoring",
+]
+
+[project.urls]
+Homepage = "https://github.com/KIMYA-Labs/nmapx"
+Source = "https://github.com/KIMYA-Labs/nmapx"
+
+[project.scripts]
+nmapx = "nmapx_app:main"
+
+[tool.setuptools.packages.find]
+include = ["nmapx*"]
